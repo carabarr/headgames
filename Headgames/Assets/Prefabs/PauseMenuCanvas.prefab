@@ -986,7 +986,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e2aee2dc92961e47b1ee378415cb50b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: []
+  health:
+  - {fileID: 2666380199508796433}
+  - {fileID: 2666380200313358701}
+  - {fileID: 2666380199344219278}
 --- !u!1 &2666380200192997170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,7 +1603,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2666380200836091194
 RectTransform:
   m_ObjectHideFlags: 0
