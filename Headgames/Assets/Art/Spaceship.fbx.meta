@@ -3,7 +3,12 @@ guid: 9030ecf1daaa86b4dad24b93cd9d6809
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Spaceship
+    second: {fileID: 2100000, guid: 6408f5497c19f934c8da1a00d9221da9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
