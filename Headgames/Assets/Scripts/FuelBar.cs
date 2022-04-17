@@ -19,7 +19,7 @@ public class FuelBar : MonoBehaviour {
 		//Update depletes health gradually
 		//TODO - refine + vary depletion rate
 		void Update(){
-			TakeDamage(.2f);
+			TakeDamage(.1f);
 		}
 
       public void SetColor(Color newColor){
