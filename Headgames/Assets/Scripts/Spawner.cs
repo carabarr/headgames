@@ -10,7 +10,8 @@ public class Spawner : MonoBehaviour
 
 
 
-    public GameObject spawnObject;
+    public GameObject starPiece;
+    public GameObject asteroid;
     public Vector3 spawnPoint;
     public float rate;
 
@@ -25,20 +26,30 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         transform.Translate(dir*Time.deltaTime*3);
- 
-      if(transform.position.x <= -4){
-           dir = Vector3.right;
-      }else if(transform.position.x >= 4){
-           dir = Vector3.left;
-      }
+        
+        if (transform.position.x <= -4) {
+            dir = Vector3.right;
+        } else if (transform.position.x >= 4) {
+            dir = Vector3.left;
+        }
+        
+        spawnTimer -= Time.deltaTime;
 
-      spawnTimer -= Time.deltaTime;
-            if (spawnTimer <= 0f)
-            {
-                Instantiate(spawnObject, transform.position, Quaternion.identity);
-                
-                spawnTimer = rate;
+        // create a random number that will decide if you spawn an asteroid
+        // or a star piece
+        int spawnDecider = Random.Range(1, 6);
+        
+        if (spawnTimer <= 0f) {
+
+            if (spawnDecider < 2) {
+                Instantiate(asteroid, transform.position, Quaternion.identity);
+            } else {
+                Instantiate(starPiece, transform.position, Quaternion.identity);
             }
+            
+            spawnTimer = rate;
+
+        }
 
     }
 }

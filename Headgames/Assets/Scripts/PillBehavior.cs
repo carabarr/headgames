@@ -5,12 +5,12 @@ using UnityEngine;
 public class PillBehavior : MonoBehaviour
 {
 
-    public float speed;
+    //public float speed;
 
     //Moves this GameObject 2 units a second in the forward direction
     void Update()
     {
-        transform.Translate(Vector3.back * Time.deltaTime * speed);
+        //transform.Translate(Vector3.back * Time.deltaTime * speed);
     }
 
     //Upon collision with another GameObject, this GameObject will reverse direction
