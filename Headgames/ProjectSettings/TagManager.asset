@@ -6,6 +6,7 @@ TagManager:
   tags:
   - StarPiece
   - Despawner
+  - FuelBar
   layers:
   - Default
   - TransparentFX

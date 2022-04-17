@@ -984,6 +984,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -7.6
       objectReference: {fileID: 0}
+    - target: {fileID: 7831162747812822341, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
+      propertyPath: m_TagString
+      value: FuelBar
+      objectReference: {fileID: 0}
     - target: {fileID: 8927652679634452577, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
       propertyPath: m_RootOrder
       value: 0

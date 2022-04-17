@@ -5,20 +5,35 @@ using UnityEngine;
 public class PillBehavior : MonoBehaviour
 {
 
-    //public float speed;
+    //fuelLevel = GameObject.FindWithTag("FuelBar");
+    //fBar = fuelLevel.GetComponent<FuelBar>();
 
-    //Moves this GameObject 2 units a second in the forward direction
+
+
     void Update()
     {
-        //transform.Translate(Vector3.back * Time.deltaTime * speed);
+
     }
 
-    //Upon collision with another GameObject, this GameObject will reverse direction
+
+    // COLLISION BEHAVIOR //
+    // Upon colliding with anything, the starpiece will be destroyed
+    //  - colliding with spaceship will cause fuel to go down
     private void OnTriggerEnter(Collider other)
     {
         //speed = speed * -1;
         Destroy(gameObject);
-        Debug.Log("Ball Collided with StarPiece");
+
+        if (other.gameObject.name == "Spaceship") {
+            Debug.Log("collided with spaceship");
+            //fbar.RefillTank(0.1f);
+
+        } else {
+            Debug.Log("collided with wall");
+
+        }
+
+        //Debug.Log(other.gameObject.name + " Collided with StarPiece");
     }
 
 
