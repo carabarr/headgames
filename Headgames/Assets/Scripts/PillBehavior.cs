@@ -5,7 +5,7 @@ using UnityEngine;
 public class PillBehavior : MonoBehaviour
 {
 
-    private float speed = 2f;
+    public float speed;
 
     //Moves this GameObject 2 units a second in the forward direction
     void Update()
