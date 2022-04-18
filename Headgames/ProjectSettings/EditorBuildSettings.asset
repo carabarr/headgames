@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Claudia Wrking.unity
+    guid: f33d6cc6820f7024b97f85fa4f6c3fc2
   m_configObjects: {}
