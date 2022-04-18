@@ -19,10 +19,11 @@ public class FuelBar : MonoBehaviour {
 	//Update depletes health gradually
 	//TODO - refine + vary depletion rate
 	void Update(){
-		TakeDamage(.1f);
+		TakeDamage(.05f);
 	}
 
 	public void SetColor(Color newColor){
+		//Debug.Log("SetColor called");
 		healthBar.GetComponent<Image>().color = newColor;
 	}
 
@@ -37,6 +38,7 @@ public class FuelBar : MonoBehaviour {
 				SetColor(Color.white);
 				Die();
 			} else {
+				//Debug.Log("Turning Red");
 				SetColor(unhealthyColor);
 			}
 		} else {
@@ -46,6 +48,9 @@ public class FuelBar : MonoBehaviour {
 
 	// colliding with star pieces increases the fuel tank
 	public void RefillTank (float starPieceHealth) {
+		
+		Debug.Log("REFILL TANK CALLED");
+		
 		health += starPieceHealth;
 		healthBar.fillAmount = health / startHealth;
 	}

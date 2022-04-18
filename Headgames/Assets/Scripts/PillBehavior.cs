@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PillBehavior : MonoBehaviour
 {
+    GameObject fbar;
 
-    //fuelLevel = GameObject.FindWithTag("FuelBar");
-    //fBar = fuelLevel.GetComponent<FuelBar>();
-
+    void Start()
+    {
+         fbar = GameObject.FindWithTag("FuelBar");
+    }
 
 
     void Update()
@@ -26,7 +28,7 @@ public class PillBehavior : MonoBehaviour
 
         if (other.gameObject.name == "Spaceship") {
             Debug.Log("collided with spaceship");
-            //fbar.RefillTank(0.1f);
+            fbar.GetComponent<FuelBar>().RefillTank(10f);
 
         } else {
             Debug.Log("collided with wall");
