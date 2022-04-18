@@ -19,7 +19,7 @@ public class FuelBar : MonoBehaviour {
 	//Update depletes health gradually
 	//TODO - refine + vary depletion rate
 	void Update(){
-		TakeDamage(.05f);
+		TakeDamage(.02f);
 	}
 
 	public void SetColor(Color newColor){
@@ -50,9 +50,11 @@ public class FuelBar : MonoBehaviour {
 	public void RefillTank (float starPieceHealth) {
 		
 		Debug.Log("REFILL TANK CALLED");
+		if (health < startHealth) {
+			health += starPieceHealth;
+			healthBar.fillAmount = health / startHealth;
+		}
 		
-		health += starPieceHealth;
-		healthBar.fillAmount = health / startHealth;
 	}
 
 

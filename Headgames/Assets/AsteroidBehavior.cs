@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class AsteroidBehavior : MonoBehaviour
 {
-    // Start is called before the first frame update
+    GameObject player;
+
     void Start()
     {
-        
+         player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
@@ -20,6 +21,13 @@ public class AsteroidBehavior : MonoBehaviour
     {
         //speed = speed * -1;
         Destroy(gameObject);
-        Debug.Log("Ball Collided with Asteroid");
+        if (other.gameObject.name == "Spaceship") {
+
+            Debug.Log("collided with spaceship");
+            player.GetComponent<NewShipDam>().TakeDamage(1);
+        } else {
+            Debug.Log("collided with wall");
+
+        }
     }
 }
