@@ -63,6 +63,6 @@ public class FuelBar : MonoBehaviour {
 		// TODO: death effect + load losing screen
 		//Vector3 objPos = this.transform.position
 		//Instantiate(deathEffect, objPos, Quaternion.identity) as GameObject;
-		//SceneManager.LoadScene ("NAME OF LOSE SCENE");
+		SceneManager.LoadScene ("GameOver");
 	}
 }

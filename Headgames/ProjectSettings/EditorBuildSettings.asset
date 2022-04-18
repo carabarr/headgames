@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Claudia Wrking.unity
     guid: f33d6cc6820f7024b97f85fa4f6c3fc2
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 369117c6ed44c4547a881e849f31a52c
   m_configObjects: {}
