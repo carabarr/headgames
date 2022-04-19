@@ -225,6 +225,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2666380200836091194, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
   m_PrefabInstance: {fileID: 302867179}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &258471007 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 441299238125726724, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
+  m_PrefabInstance: {fileID: 302867179}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &302867179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -700,6 +705,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenuCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2666380200395030865, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2666380200836091194, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
       propertyPath: m_SizeDelta.x
       value: 76.3148
@@ -938,7 +947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2666380201150181215, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2666380201207222668, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
       propertyPath: m_Color.b
@@ -1135,6 +1144,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &510714789 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3956728124204326241, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
+  m_PrefabInstance: {fileID: 302867179}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &598944126
 GameObject:
   m_ObjectHideFlags: 0
@@ -1436,9 +1450,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 258471007}
+  - {fileID: 510714789}
+  - {fileID: 1392423323}
 --- !u!1 &863553537
 GameObject:
   m_ObjectHideFlags: 0
@@ -2020,6 +2034,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309280795}
   m_CullTransparentMesh: 1
+--- !u!1 &1392423323 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6020423189436037137, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
+  m_PrefabInstance: {fileID: 302867179}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1738252278 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2666380200395030865, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}

@@ -33,10 +33,4 @@ public class NewShipDam : MonoBehaviour
 			}
 		}
 	}
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
