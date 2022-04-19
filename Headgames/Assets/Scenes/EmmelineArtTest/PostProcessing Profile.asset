@@ -20,11 +20,11 @@ MonoBehaviour:
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 3
+    m_Value: 2
     min: 0
   scatter:
     m_OverrideState: 1
-    m_Value: 0.7
+    m_Value: 0.645
     min: 0
     max: 1
   clamp:
@@ -33,7 +33,7 @@ MonoBehaviour:
     min: 0
   tint:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_Value: {r: 0.9960785, g: 0.9960785, b: 0.9960785, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
@@ -52,7 +52,7 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 40
     min: 0
---- !u!114 &-3574805278497362633
+--- !u!114 &-238454629004756097
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,33 +61,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
-  m_Name: ColorAdjustments
+  m_Script: {fileID: 11500000, guid: 70afe9e12c7a7ed47911bb608a23a8ff, type: 3}
+  m_Name: SplitToning
   m_EditorClassIdentifier: 
   active: 0
   m_AdvancedMode: 0
-  postExposure:
+  shadows:
     m_OverrideState: 1
-    m_Value: 0
-  contrast:
-    m_OverrideState: 1
-    m_Value: 38
-    min: -100
-    max: 100
-  colorFilter:
-    m_OverrideState: 1
-    m_Value: {r: 0.734247, g: 0.9301742, b: 0.9433962, a: 1}
-    hdr: 1
+    m_Value: {r: 0.24123353, g: 0.3679245, b: 0.3882353, a: 1}
+    hdr: 0
     showAlpha: 0
     showEyeDropper: 1
-  hueShift:
+  highlights:
     m_OverrideState: 1
-    m_Value: -64
-    min: -180
-    max: 180
-  saturation:
+    m_Value: {r: 0.8301887, g: 0.42531782, b: 0.33285868, a: 1}
+    hdr: 0
+    showAlpha: 0
+    showEyeDropper: 1
+  balance:
     m_OverrideState: 1
-    m_Value: -2
+    m_Value: 3
     min: -100
     max: 100
 --- !u!114 &11400000
@@ -104,4 +97,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   components:
   - {fileID: -7021719909457564150}
-  - {fileID: -3574805278497362633}
+  - {fileID: -238454629004756097}
+  - {fileID: 8296741444418981185}
+--- !u!114 &8296741444418981185
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
+  m_Name: ChromaticAberration
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0.227
+    min: 0
+    max: 1

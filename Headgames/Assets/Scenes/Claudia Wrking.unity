@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.2272161, g: 0.23242702, b: 0.4339623, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.1
@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.020425422, g: 0.02238009, b: 0.084905684, a: 1}
   m_AmbientIntensity: 1.71
   m_AmbientMode: 1
-  m_SubtractiveShadowColor: {r: 0.16629584, g: 0.27481005, b: 0.3490566, a: 1}
+  m_SubtractiveShadowColor: {r: 0.31955323, g: 0.39550492, b: 0.4056604, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: d3aac20b60c5c4f4a9d939605ec8eaa7, type: 2}
   m_HaloStrength: 0.035
   m_FlareStrength: 1
@@ -983,15 +983,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3139486058143199939, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
       propertyPath: m_Color.b
-      value: 0.8820755
+      value: 0.94117653
       objectReference: {fileID: 0}
     - target: {fileID: 3139486058143199939, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.9960785
       objectReference: {fileID: 0}
     - target: {fileID: 3139486058143199939, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
       propertyPath: m_Color.r
-      value: 0.9298141
+      value: 0.854902
       objectReference: {fileID: 0}
     - target: {fileID: 3343635935368410503, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
       propertyPath: m_RootOrder
@@ -2191,7 +2191,7 @@ GameObject:
   - component: {fileID: 1752496638}
   m_Layer: 0
   m_Name: MoveForward
-  m_TagString: Untagged
+  m_TagString: Movement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2208,7 +2208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a44b7ef9b3062f44aaf9a1da9a4cfd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.008
+  speed: 0.04
 --- !u!4 &1752496639
 Transform:
   m_ObjectHideFlags: 0
@@ -2477,5 +2477,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHealth: 100
   healthBar: {fileID: 1248778781}
-  healthyColor: {r: 0.3, g: 0.8, b: 0.3, a: 1}
+  healthyColor: {r: 0.854902, g: 0.9960785, b: 0.94117653, a: 1}
   unhealthyColor: {r: 0.8, g: 0.3, b: 0.3, a: 1}
