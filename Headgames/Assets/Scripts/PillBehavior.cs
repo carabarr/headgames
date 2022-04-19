@@ -14,7 +14,8 @@ public class PillBehavior : MonoBehaviour
 
     void Update()
     {
-
+		//SPINS
+		transform.Rotate (new Vector3 (0.0f, 45.0f, 0.0f) * Time.deltaTime);
     }
 
 
