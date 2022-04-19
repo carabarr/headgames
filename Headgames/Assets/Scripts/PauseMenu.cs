@@ -7,6 +7,7 @@ using UnityEngine.Audio;
 
 public class PauseMenu : MonoBehaviour  {
 
+        GameObject mov;
         public static bool GameisPaused = false;
         public GameObject pauseMenuUI;
 		public GameObject controlsUI;
@@ -28,6 +29,7 @@ public class PauseMenu : MonoBehaviour  {
         }
 
         void Start (){
+                mov = GameObject.FindWithTag("Movement");
                 pauseMenuUI.SetActive(false);
 				controlsUI.SetActive(false);
 				volumeUI.SetActive(false);
@@ -52,6 +54,7 @@ public class PauseMenu : MonoBehaviour  {
 				StatsIndicators.SetActive(false);
                 Time.timeScale = 0f;
                 GameisPaused = true;
+                mov.GetComponent<ForwardMovement>().SetSpeed(0);
         }
 
         public void Resume(){
@@ -60,6 +63,7 @@ public class PauseMenu : MonoBehaviour  {
 				PauseButton.SetActive(true);
                 Time.timeScale = 1f;
                 GameisPaused = false;
+                mov.GetComponent<ForwardMovement>().restoreSpeed();
         }
 
 		public void HideControls()
