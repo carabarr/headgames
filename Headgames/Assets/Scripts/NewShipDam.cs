@@ -10,7 +10,7 @@ public class NewShipDam : MonoBehaviour
 	private int maxLives; 
 	private GameObject player;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         life = health.Length;

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class FuelBar : MonoBehaviour {
 
+	public static int fuelDepletion;
 	public float startHealth = 100;
 	private float health;
 	public Image healthBar;
@@ -14,12 +15,28 @@ public class FuelBar : MonoBehaviour {
 
 	private void Start () {
 		health = startHealth;
+		
+		//i am using this for three distinct fueldepletion rates
+		//this can be accessed in other scritps by typing FuelBar.fuelDepletion 
+		fuelDepletion = 1;
 	}
 
 	//Update depletes health gradually
-	//TODO - refine + vary depletion rate
+	//TODO - refine depletion rate
 	void Update(){
-		TakeDamage(.02f);
+
+		//slowest rate
+		if (fuelDepletion == 1){
+			TakeDamage(.1f);
+		}
+		//medium rate
+		else if (fuelDepletion == 2){
+			TakeDamage(.1f);
+		}
+		//FAST rate
+		else{
+			TakeDamage(.4f);
+		}
 	}
 
 	public void SetColor(Color newColor){
@@ -35,7 +52,6 @@ public class FuelBar : MonoBehaviour {
 		//turn red at low health:
 		if (health < 0.3f) {
 			if ((health * 100f) % 3 <= 0) {
-				SetColor(Color.white);
 				Die();
 			} else {
 				//Debug.Log("Turning Red");
@@ -52,13 +68,15 @@ public class FuelBar : MonoBehaviour {
 		Debug.Log("REFILL TANK CALLED");
 		if (health < startHealth) {
 			health += starPieceHealth;
+
+			if (health > startHealth){
+				health = startHealth;
+			}
+
 			healthBar.fillAmount = health / startHealth;
 		}
 		
 	}
-
-
-
 
 	public void Die(){
 		//Debug.Log("YOU LOSE UR DEAD LOLOLOL");
