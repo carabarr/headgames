@@ -29,7 +29,7 @@ public class PillBehavior : MonoBehaviour
 
         if (other.gameObject.name == "Spaceship") {
             Debug.Log("collided with spaceship");
-            fbar.GetComponent<FuelBar>().RefillTank(5f);
+            fbar.GetComponent<FuelBar>().RefillTank(7f);
 
         } else {
             Debug.Log("collided with wall");

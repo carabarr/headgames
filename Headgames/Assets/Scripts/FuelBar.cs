@@ -27,15 +27,15 @@ public class FuelBar : MonoBehaviour {
 
 		//slowest rate
 		if (fuelDepletion == 1){
-			TakeDamage(.1f);
+			TakeDamage(.05f);
 		}
 		//medium rate
 		else if (fuelDepletion == 2){
-			TakeDamage(.1f);
+			TakeDamage(.06f);
 		}
 		//FAST rate
 		else{
-			TakeDamage(.4f);
+			TakeDamage(.08f);
 		}
 	}
 
