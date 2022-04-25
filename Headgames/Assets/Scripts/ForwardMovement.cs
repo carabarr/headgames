@@ -9,6 +9,7 @@ public class ForwardMovement : MonoBehaviour
 	public float acceleration;
     private float ogSpeed;
 	private float maxSpeed = 13f;
+	private float addscore;
 
     private Vector3 dir = Vector3.forward;
 
@@ -49,6 +50,8 @@ public class ForwardMovement : MonoBehaviour
 			}
 
         transform.Translate(dir * speed * Time.deltaTime);
+		addscore = speed * Time.deltaTime;
+		GameHandler.playerScore += addscore;
         
     }
 }

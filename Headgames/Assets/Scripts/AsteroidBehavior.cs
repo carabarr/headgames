@@ -5,14 +5,17 @@ using UnityEngine;
 public class AsteroidBehavior : MonoBehaviour
 {
     GameObject player;
+	public CameraShake cameraShake;  
+
 	private float xValue;
 	private float yValue;
 	private float zValue;
-
+	
 
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+		cameraShake = GameObject.FindWithTag("MainCamera").GetComponent<CameraShake>();
 		xValue = Random.Range(-45.0f, 45.0f);
 		yValue = Random.Range(-45.0f, 45.0f);
 		zValue = Random.Range(-45.0f, 45.0f);
@@ -31,11 +34,9 @@ public class AsteroidBehavior : MonoBehaviour
         Destroy(gameObject);
         if (other.gameObject.name == "Spaceship") {
 
-            Debug.Log("collided with spaceship");
+            //Debug.Log("collided with spaceship");
             player.GetComponent<NewShipDam>().TakeDamage(1);
-        } else {
-            Debug.Log("collided with wall");
-
-        }
+			StartCoroutine(cameraShake.Shake(.15f, .15f));
+        } 
     }
 }

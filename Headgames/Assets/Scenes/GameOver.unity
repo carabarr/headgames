@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 128358502}
   - component: {fileID: 128358501}
   m_Layer: 5
-  m_Name: Score
+  m_Name: units
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -236,7 +236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 152.7514, y: -54.368565}
+  m_AnchoredPosition: {x: 152.7514, y: -24.99257}
   m_SizeDelta: {x: 455.2462, y: 83.9204}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &128358501
@@ -272,7 +272,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: _______ units
+  m_Text: '                     units'
 --- !u!222 &128358502
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -290,6 +290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 329792911}
+  - component: {fileID: 329792912}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -313,6 +314,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &329792912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329792910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0675cdafa828a84cbc11e3112102c39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 442905672}
 --- !u!1 &442905672
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,7 +339,7 @@ GameObject:
   - component: {fileID: 442905675}
   - component: {fileID: 442905674}
   m_Layer: 5
-  m_Name: Score_Text
+  m_Name: distanceTravelled
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -347,8 +361,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -199.1, y: -32.8}
-  m_SizeDelta: {x: 234.2293, y: 81.9358}
+  m_AnchoredPosition: {x: -82, y: -24}
+  m_SizeDelta: {x: 472.9244, y: 81.9358}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &442905674
 MonoBehaviour:
@@ -372,7 +386,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 43c198e5796761645946ad2385509599, type: 3}
-    m_FontSize: 25
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -383,7 +397,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'distance travelled:'
+  m_Text: 'distance:'
 --- !u!222 &442905675
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1016,7 +1030,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.0000038146973}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 45.1044}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1717863446
