@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 6712cfbce8c8d054f98fbb4f7c586c26
   - enabled: 0
-    path: Assets/Scenes/LevelScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/Claudia Wrking.unity
     guid: f33d6cc6820f7024b97f85fa4f6c3fc2
   - enabled: 1

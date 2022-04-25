@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class PillBehavior : MonoBehaviour
 {
-    GameObject fbar;
+    
 	public GameObject ps;
-	public GameObject particleSpawn;
+	GameObject particleSpawn;
+	GameObject fbar;
 
     void Start()
     {
-         fbar = GameObject.FindWithTag("FuelBar");
+        fbar = GameObject.FindWithTag("FuelBar");
+		particleSpawn = GameObject.FindWithTag("SpawnParticles");
     }
 
 

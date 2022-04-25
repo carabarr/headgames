@@ -8,6 +8,7 @@ TagManager:
   - Despawner
   - FuelBar
   - Movement
+  - SpawnParticles
   layers:
   - Default
   - TransparentFX
