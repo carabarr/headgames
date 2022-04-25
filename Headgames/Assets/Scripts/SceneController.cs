@@ -12,6 +12,11 @@ public class SceneController : MonoBehaviour
    public void LoadLevel1(){
         SceneManager.LoadScene(nextSceneName);
     }
+
+	public void Restart(){
+		GameHandler.playerScore = 0;
+        SceneManager.LoadScene(nextSceneName);
+    }
 	
 	//can send player to a new scene based on specified collision
 	//idk maybe we'll use it?

@@ -88,6 +88,7 @@ public class PauseMenu : MonoBehaviour  {
 
         public void Restart(){
                 Time.timeScale = 1f;
+				GameHandler.playerScore =0;
                 //restart the game:
                 Scene scene = SceneManager.GetActiveScene();
                 SceneManager.LoadScene(scene.name);
