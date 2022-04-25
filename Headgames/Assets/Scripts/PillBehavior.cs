@@ -5,6 +5,8 @@ using UnityEngine;
 public class PillBehavior : MonoBehaviour
 {
     GameObject fbar;
+	public GameObject ps;
+	public GameObject particleSpawn;
 
     void Start()
     {
@@ -30,6 +32,7 @@ public class PillBehavior : MonoBehaviour
         if (other.gameObject.name == "Spaceship") {
             Debug.Log("collided with spaceship");
             fbar.GetComponent<FuelBar>().RefillTank(7f);
+			Instantiate(ps, particleSpawn.transform.position, Quaternion.identity);
 
         } else {
             Debug.Log("collided with wall");
