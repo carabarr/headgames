@@ -34,7 +34,7 @@ public class NewShipDam : MonoBehaviour
 				life -= damage;
 				//make flash effect
 				Destroy(health[life].gameObject);
-				StartCoroutine(DoBlinks(.5f, 0.1f));
+				StartCoroutine(DoBlinks(0.1f, 0.1f));
 
 				if (life < 1)
 				{

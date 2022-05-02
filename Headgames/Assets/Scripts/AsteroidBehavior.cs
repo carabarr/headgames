@@ -41,8 +41,9 @@ public class AsteroidBehavior : MonoBehaviour
             player.GetComponent<NewShipDam>().TakeDamage(1);
 			StartCoroutine(cameraShake.Shake(.15f, .15f));
 
-			//SLOW THE PLAYER DOWN??? - emmeline 
-			MoveSpeed.SetSpeed(1f);
+			//SLOW THE PLAYER DOWN??? - emmeline
+            // let something else handle sped down - claudia
+			//MoveSpeed.SetSpeed(1f);
 			
         } 
     }

@@ -9,7 +9,7 @@ public class ForwardMovement : MonoBehaviour
 	public float acceleration;
     private float ogSpeed;
 	private float maxSpeed = 13f;
-	private float addscore;
+	private float addScore;
 
     private Vector3 dir = Vector3.forward;
 
@@ -37,21 +37,21 @@ public class ForwardMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-			speed += acceleration;
+			// speed += acceleration;
 
-			if (speed == maxSpeed/2){
-				Debug.Log("WE ARE ON ON DEPLETION LEVEL 2");
-				FuelBar.fuelDepletion = 2;
-			}
+			// if (speed == maxSpeed/2){
+			// 	Debug.Log("WE ARE ON ON DEPLETION LEVEL 2");
+			// 	FuelBar.fuelDepletion = 2;
+			// }
  
-			if (speed > (maxSpeed - 2)){
-				speed = maxSpeed;
-				FuelBar.fuelDepletion = 3;
-			}
+			// if (speed > (maxSpeed - 2)){
+			// 	speed = maxSpeed;
+			// 	FuelBar.fuelDepletion = 3;
+			// }
 
         transform.Translate(dir * speed * Time.deltaTime);
-		addscore = speed * Time.deltaTime;
-		GameHandler.playerScore += addscore;
+		addScore = speed * Time.deltaTime;
+		GameHandler.playerScore += addScore;
         
     }
 }
