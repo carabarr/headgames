@@ -10,8 +10,6 @@ public class FuelBar : MonoBehaviour {
 	public float startHealth = 100;
 	private float health;
 	public Image healthBar;
-	public Color healthyColor = new Color(0.3f, 0.8f, 0.3f);
-	public Color unhealthyColor = new Color(0.8f, 0.3f, 0.3f);
 
 	private void Start () {
 		health = startHealth;
@@ -39,12 +37,6 @@ public class FuelBar : MonoBehaviour {
 		}
 	}
 
-	public void SetColor(Color newColor){
-		//Debug.Log("SetColor called");
-		healthBar.GetComponent<Image>().color = newColor;
-	}
-
-
 	// slowly decreases the fuel tank
 	public void TakeDamage (float amount){
 		health -= amount;
@@ -53,12 +45,7 @@ public class FuelBar : MonoBehaviour {
 		if (health < 0.3f) {
 			if ((health * 100f) % 3 <= 0) {
 				Die();
-			} else {
-				//Debug.Log("Turning Red");
-				SetColor(unhealthyColor);
-			}
-		} else {
-				SetColor(healthyColor);
+			} 
 		}
 	}
 
