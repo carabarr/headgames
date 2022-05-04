@@ -14,10 +14,16 @@ public class Spawner : MonoBehaviour
     // range of 4 is the default that we've been using since the beginning
     public float range;
 
+    // default asteroid/star spawn rate, should be 2 for a range of [1, 6]
+    // less than 4 [1, 12]
+    public int defaultRate;
+    public int spawnRate;
+
     float spawnTimer;
     // Start is called before the first frame update
     void Start()
     {
+        spawnRate = defaultRate;
         spawnTimer = rate;
     }
 
@@ -36,11 +42,11 @@ public class Spawner : MonoBehaviour
 
         // create a random number that will decide if you spawn an asteroid
         // or a star piece
-        int spawnDecider = Random.Range(1, 6);
+        int spawnDecider = Random.Range(1, 12);
         
         if (spawnTimer <= 0f) {
 
-            if (spawnDecider < 2) {
+            if (spawnDecider < spawnRate) {
                 Instantiate(asteroid, transform.position, Quaternion.identity);
             } else {
                 Instantiate(starPiece, transform.position, Quaternion.identity);
@@ -60,10 +66,19 @@ public class Spawner : MonoBehaviour
     }
 
     public void defaultRange () {
-        Debug.Log("widening range again");
-        while (range < 2) {
-            range = range + (Time.deltaTime * 0.1f);
+        while (range < 4) {
+            range = range + (Time.deltaTime * 1f);
         }
 
+    }
+
+    public void lessAsteroids () {
+        StartCoroutine(decreaseAsts());
+    }
+
+    IEnumerator decreaseAsts() {
+        spawnRate = 1;
+        yield return new WaitForSeconds(10);
+        spawnRate = defaultRate;
     }
 }

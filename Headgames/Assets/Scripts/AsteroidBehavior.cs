@@ -7,6 +7,7 @@ public class AsteroidBehavior : MonoBehaviour
     GameObject player;
 	CameraShake cameraShake;  
 	ForwardMovement MoveSpeed;
+    GameObject spawn;
 
 	private float xValue;
 	private float yValue;
@@ -15,6 +16,7 @@ public class AsteroidBehavior : MonoBehaviour
 
     void Start()
     {
+        spawn = GameObject.FindWithTag("Spawner");
         player = GameObject.FindWithTag("Player");
 		cameraShake = GameObject.FindWithTag("MainCamera").GetComponent<CameraShake>();
 		MoveSpeed = GameObject.FindWithTag("Movement").GetComponent<ForwardMovement>();
@@ -44,6 +46,10 @@ public class AsteroidBehavior : MonoBehaviour
 			//SLOW THE PLAYER DOWN??? - emmeline
             // let something else handle sped down - claudia
 			//MoveSpeed.SetSpeed(1f);
+
+            // decrease the rate of asteroids after hitting spaceship
+            spawn.GetComponent<Spawner>().lessAsteroids();
+
 			
         } 
     }

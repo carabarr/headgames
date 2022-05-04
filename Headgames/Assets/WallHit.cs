@@ -21,7 +21,7 @@ public class WallHit : MonoBehaviour
             spawn.GetComponent<Spawner>().easierRange();
 
         }
-
+        
         if (missedStars == 0) {
             Debug.Log("starting coroutine to make range wider");
             StartCoroutine(WidenRange());
