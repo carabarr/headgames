@@ -14,6 +14,7 @@ public class NewShipDam : MonoBehaviour
 	private bool is_invincible = false;
 	private MeshRenderer r;
 	private GameObject trails;
+	public ParticleSystem impactParticles;
 	
 
     void Start()
@@ -34,6 +35,7 @@ public class NewShipDam : MonoBehaviour
 				life -= damage;
 				//make flash effect
 				Destroy(health[life].gameObject);
+				Instantiate (impactParticles, this.transform.position, Quaternion.identity);
 				StartCoroutine(DoBlinks(0.1f, 0.1f));
 
 				if (life < 1)
