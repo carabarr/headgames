@@ -1531,6 +1531,7 @@ MonoBehaviour:
   - {fileID: 258471007}
   - {fileID: 510714789}
   - {fileID: 1392423323}
+  impactParticles: {fileID: 6403623320352214493, guid: 852ee0c1bfe490c459a187a5761d3e3d, type: 3}
 --- !u!1 &929393475
 GameObject:
   m_ObjectHideFlags: 0
@@ -1727,6 +1728,8 @@ MonoBehaviour:
   spawnPoint: {x: 0, y: 0, z: 0}
   rate: 0.75
   range: 4
+  defaultRate: 4
+  spawnRate: 0
 --- !u!65 &1154560676
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2382,5 +2385,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29eb8413c4fe80e45a369a18e5fa4df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 100
+  startHealth: 1000
   healthBar: {fileID: 1248778781}
