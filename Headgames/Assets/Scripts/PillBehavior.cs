@@ -44,6 +44,7 @@ public class PillBehavior : MonoBehaviour
 
         } else {
             wall.GetComponent<WallHit>().missedStarsRow();
+			ship.GetComponent<NewShipDam>().resetStars();
 
         }
 

@@ -6,11 +6,13 @@ public class WallHit : MonoBehaviour
 {
     public int missedStars;
     GameObject spawn;
+	GameObject forward;
 
     // Start is called before the first frame update
     void Start()
     {
         spawn = GameObject.FindWithTag("Spawner");
+		forward = GameObject.FindWithTag("Movement");
         missedStars = 0;
     }
 
@@ -19,7 +21,7 @@ public class WallHit : MonoBehaviour
     {
         if (missedStars >= 3) {
             spawn.GetComponent<Spawner>().easierRange();
-
+			forward.GetComponent<ForwardMovement>().lowerMovement(0.1f);
         }
 
         StartCoroutine(WidenRange());

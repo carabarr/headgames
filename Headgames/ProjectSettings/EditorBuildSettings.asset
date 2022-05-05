@@ -17,7 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 369117c6ed44c4547a881e849f31a52c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Emmeline_Test.unity
     guid: f354b49228e8efc41b1e5ec948735232
+  - enabled: 1
+    path: Assets/Scenes/DiffEng Claudia.unity
+    guid: 967dbcceb0ab92e41b2df49e4610c34d
   m_configObjects: {}

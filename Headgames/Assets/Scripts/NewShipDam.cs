@@ -46,10 +46,13 @@ public class NewShipDam : MonoBehaviour
 		if (starsCollected > 5) {
 			Debug.Log("FAST");
 			forward.GetComponent<ForwardMovement>().fastenMovement();
-		} else {
-			Debug.Log("SLOW DOWn");
-			forward.GetComponent<ForwardMovement>().lowerMovement(0.1f);
+			player.GetComponent<NewShipDam>().resetStars();
+			yield return new WaitForSeconds(10);
 		} 
+		//else {
+		//	Debug.Log("SLOW DOWn");
+		//	forward.GetComponent<ForwardMovement>().lowerMovement(0.1f);
+		//} 
     }
 
     public void TakeDamage(int damage)
@@ -97,6 +100,13 @@ public class NewShipDam : MonoBehaviour
         starsCollected++;
 		Debug.Log("COLLECTED STARS: " + starsCollected);
 		
+		
+	}
+
+
+	public void resetStars () {
+		
+        starsCollected = 0;
 		
 	}
 }

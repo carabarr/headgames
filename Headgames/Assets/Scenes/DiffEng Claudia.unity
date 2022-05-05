@@ -1036,15 +1036,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3139486058143199939, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
       propertyPath: m_Color.b
-      value: 0.94117653
+      value: 0.6313726
       objectReference: {fileID: 0}
     - target: {fileID: 3139486058143199939, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
       propertyPath: m_Color.g
-      value: 0.9960785
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3139486058143199939, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
       propertyPath: m_Color.r
-      value: 0.854902
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3343635935368410503, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
       propertyPath: m_RootOrder
@@ -1062,6 +1062,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -26.7
       objectReference: {fileID: 0}
+    - target: {fileID: 4775556657086165394, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 343.09387
+      objectReference: {fileID: 0}
     - target: {fileID: 4949736535725454864, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1072,7 +1076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5184752921101734818, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 64.90611
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 5359284970022312703, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
       propertyPath: m_Text
@@ -1105,6 +1109,10 @@ PrefabInstance:
     - target: {fileID: 7831162747812822341, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339088958987458877, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
+      propertyPath: m_Text
+      value: Parsecs
       objectReference: {fileID: 0}
     - target: {fileID: 8927652679634452577, guid: 7a9b6cf6bc53cc3418e7836565b23cf5, type: 3}
       propertyPath: m_RootOrder
@@ -1532,6 +1540,7 @@ MonoBehaviour:
   - {fileID: 510714789}
   - {fileID: 1392423323}
   impactParticles: {fileID: 6403623320352214493, guid: 852ee0c1bfe490c459a187a5761d3e3d, type: 3}
+  starsCollected: 0
 --- !u!1 &929393475
 GameObject:
   m_ObjectHideFlags: 0
@@ -2071,8 +2080,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a44b7ef9b3062f44aaf9a1da9a4cfd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  acceleration: 0.005
+  speed: 3
+  acceleration: 0.001
 --- !u!4 &1752496639
 Transform:
   m_ObjectHideFlags: 0
@@ -2385,5 +2394,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29eb8413c4fe80e45a369a18e5fa4df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 1000
+  startHealth: 100
   healthBar: {fileID: 1248778781}

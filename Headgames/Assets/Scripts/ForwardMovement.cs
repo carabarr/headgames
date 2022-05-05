@@ -8,8 +8,9 @@ public class ForwardMovement : MonoBehaviour
     public float speed;
 	public float acceleration;
     private float ogSpeed;
-	private float maxSpeed = 15f;
+	//private float maxSpeed = 15f;
 	private float addScore;
+	private float new_Speed;
 
     private Vector3 dir = Vector3.forward;
 
@@ -36,8 +37,9 @@ public class ForwardMovement : MonoBehaviour
 
     // fast speed (while catching every star)
     public void fastenMovement () {
-        while (speed < maxSpeed) {
-            speed = speed + (Time.deltaTime * 0.05f);
+		new_Speed = speed + 1.0f;
+        while (speed < new_Speed) {
+            speed = speed + (Time.deltaTime * 0.001f);
         }
     }
 
@@ -51,17 +53,17 @@ public class ForwardMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-			// speed += acceleration;
+			speed += acceleration;
 
-			// if (speed == maxSpeed/2){
+			//if (speed == maxSpeed/2){
 			// 	Debug.Log("WE ARE ON ON DEPLETION LEVEL 2");
-			// 	FuelBar.fuelDepletion = 2;
-			// }
+			//FuelBar.fuelDepletion = 2;
+			//}
  
-			// if (speed > (maxSpeed - 2)){
-			// 	speed = maxSpeed;
-			// 	FuelBar.fuelDepletion = 3;
-			// }
+			//if (speed > (maxSpeed - 2)){
+			//speed = maxSpeed;
+			//FuelBar.fuelDepletion = 3;
+			//}
 
         // moves everything forward
         transform.Translate(dir * speed * Time.deltaTime);
