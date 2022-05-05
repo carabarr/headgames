@@ -9,12 +9,14 @@ public class PillBehavior : MonoBehaviour
 	GameObject particleSpawn;
 	GameObject fbar;
     GameObject wall;
+    GameObject ship;
 
     void Start()
     {
         fbar = GameObject.FindWithTag("FuelBar");
 		particleSpawn = GameObject.FindWithTag("SpawnParticles");
         wall = GameObject.FindWithTag("Wall");
+        ship = GameObject.FindWithTag("Player");
     }
 
 
@@ -35,6 +37,7 @@ public class PillBehavior : MonoBehaviour
 
         if (other.gameObject.name == "Spaceship") {
             Debug.Log("collided with spaceship");
+            ship.GetComponent<NewShipDam>().collectedStarsRow();
             fbar.GetComponent<FuelBar>().RefillTank(7f);
             wall.GetComponent<WallHit>().resetStars();
 			Instantiate(ps, particleSpawn.transform.position, Quaternion.identity);

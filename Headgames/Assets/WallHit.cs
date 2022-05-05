@@ -21,17 +21,18 @@ public class WallHit : MonoBehaviour
             spawn.GetComponent<Spawner>().easierRange();
 
         }
+
+        StartCoroutine(WidenRange());
         
-        if (missedStars == 0) {
-            Debug.Log("starting coroutine to make range wider");
-            StartCoroutine(WidenRange());
-        }
+        
         
     }
 
     IEnumerator WidenRange() {
-        yield return new WaitForSeconds(5);
-        spawn.GetComponent<Spawner>().defaultRange();
+        if (missedStars == 0) {
+            yield return new WaitForSeconds(5);
+            spawn.GetComponent<Spawner>().defaultRange(); 
+        }
     }
 
     public void missedStarsRow () {

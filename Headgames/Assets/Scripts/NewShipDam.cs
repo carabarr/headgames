@@ -15,16 +15,41 @@ public class NewShipDam : MonoBehaviour
 	private MeshRenderer r;
 	private GameObject trails;
 	public ParticleSystem impactParticles;
+
+	// speed up stuff
+	public int starsCollected;
+	GameObject forward;
+
 	
 
     void Start()
     {
+		starsCollected = 0;
         life = health.Length;
 		maxLives = health.Length;
 		player = GameObject.FindWithTag("Player");
+		forward = GameObject.FindWithTag("Movement");
 		
 		trails = this.transform.GetChild(0).gameObject;
 		r = this.GetComponent<MeshRenderer>();
+    }
+
+
+	void Update () {
+
+		StartCoroutine(updateSpeedAfter10sec());
+		
+	}
+
+	IEnumerator updateSpeedAfter10sec() {
+		yield return new WaitForSeconds(10);
+		if (starsCollected > 5) {
+			Debug.Log("FAST");
+			forward.GetComponent<ForwardMovement>().fastenMovement();
+		} else {
+			Debug.Log("SLOW DOWn");
+			forward.GetComponent<ForwardMovement>().lowerMovement();
+		} 
     }
 
     public void TakeDamage(int damage)
@@ -32,6 +57,7 @@ public class NewShipDam : MonoBehaviour
 		if (is_invincible == false){
 			if (life >= 1 && life <= maxLives)
 			{
+				starsCollected = 0;
 				life -= damage;
 				//make flash effect
 				Destroy(health[life].gameObject);
@@ -64,5 +90,14 @@ public class NewShipDam : MonoBehaviour
 		is_invincible = false;
 		 trails.SetActive (true);
      }
+
+
+	public void collectedStarsRow () {
+		
+        starsCollected++;
+		Debug.Log("COLLECTED STARS: " + starsCollected);
+		
+		
+	}
 }
  

@@ -8,7 +8,7 @@ public class ForwardMovement : MonoBehaviour
     public float speed;
 	public float acceleration;
     private float ogSpeed;
-	private float maxSpeed = 13f;
+	private float maxSpeed = 15f;
 	private float addScore;
 
     private Vector3 dir = Vector3.forward;
@@ -32,6 +32,20 @@ public class ForwardMovement : MonoBehaviour
         speed = ogSpeed;
 		FuelBar.fuelDepletion = 1;
 
+    }
+
+    // fast speed (while catching every star)
+    public void fastenMovement () {
+        while (speed < maxSpeed) {
+            speed = speed + (Time.deltaTime * 0.05f);
+        }
+    }
+
+    // lower speed (back to the default)
+    public void lowerMovement () {
+        while (speed > ogSpeed) {
+            speed = speed - (Time.deltaTime * 0.1f);
+        }
     }
 
     // Update is called once per frame
