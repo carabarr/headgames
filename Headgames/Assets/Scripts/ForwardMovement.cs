@@ -42,9 +42,9 @@ public class ForwardMovement : MonoBehaviour
     }
 
     // lower speed (back to the default)
-    public void lowerMovement () {
+    public void lowerMovement (float rate) {
         while (speed > ogSpeed) {
-            speed = speed - (Time.deltaTime * 0.1f);
+            speed = speed - (Time.deltaTime * rate);
         }
     }
 

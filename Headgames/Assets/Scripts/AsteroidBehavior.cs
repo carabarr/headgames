@@ -45,7 +45,7 @@ public class AsteroidBehavior : MonoBehaviour
 
 			//SLOW THE PLAYER DOWN??? - emmeline
             // let something else handle sped down - claudia
-			//MoveSpeed.SetSpeed(1f);
+			MoveSpeed.lowerMovement(1f);
 
             // decrease the rate of asteroids after hitting spaceship
             spawn.GetComponent<Spawner>().lessAsteroids();

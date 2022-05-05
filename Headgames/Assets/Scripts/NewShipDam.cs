@@ -48,7 +48,7 @@ public class NewShipDam : MonoBehaviour
 			forward.GetComponent<ForwardMovement>().fastenMovement();
 		} else {
 			Debug.Log("SLOW DOWn");
-			forward.GetComponent<ForwardMovement>().lowerMovement();
+			forward.GetComponent<ForwardMovement>().lowerMovement(0.1f);
 		} 
     }
 
